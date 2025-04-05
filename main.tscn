@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmhclqifdrlv"]
+
+[ext_resource type="Script" uid="uid://ctqr43ai1luqe" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cd17xg8y872f7" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dgpjvdecodeet" path="res://enemy.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://12p8vkfjv6li" path="res://tilemap.tscn" id="4_1bvp3"]
+
+[node name="MAIN" type="Node"]
+script = ExtResource("1_h2yge")
+mob_scene = ExtResource("2_1bvp3")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("4_1bvp3")]
+
+[node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(0, -2)
